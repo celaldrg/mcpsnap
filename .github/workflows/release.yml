@@ -45,7 +45,9 @@ jobs:
       - uses: actions/upload-artifact@v4
         with:
           name: ${{ matrix.target }}
-          path: mcpsnap-*.*
+          path: |
+            mcpsnap-*.tar.gz
+            mcpsnap-*.zip
 
   release:
     needs: build
@@ -56,7 +58,7 @@ jobs:
           path: dist
           merge-multiple: true
       - name: Checksums
-        run: cd dist && sha256sum * > SHA256SUMS.txt && cat SHA256SUMS.txt
+        run: cd dist && ls -la && sha256sum *.tar.gz *.zip > SHA256SUMS.txt && cat SHA256SUMS.txt
       - name: Upload to the release
         env:
           GH_TOKEN: ${{ github.token }}
