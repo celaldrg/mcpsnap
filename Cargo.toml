@@ -1,0 +1,16 @@
+[package]
+name = "mcpsnap"
+version = "0.1.0"
+edition = "2021"
+description = "Snapshot tests for MCP servers: record a real stdio session once, replay it on every change, fail on drift"
+license = "MIT"
+repository = "https://github.com/celaldrg/mcpsnap"
+readme = "README.md"
+keywords = ["mcp", "snapshot-testing", "ai-agents", "json-rpc", "cli"]
+categories = ["command-line-utilities", "development-tools::testing"]
+
+[dependencies]
+
+[profile.release]
+strip = true
+lto = true

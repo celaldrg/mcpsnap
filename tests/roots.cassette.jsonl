@@ -1,0 +1,7 @@
+{"mcpsnap":1,"cmd":[],"recorded":"2026-11-20T10:00:00Z"}
+{"t":0,"dir":"c2s","msg":{"jsonrpc":"2.0","id":1,"method":"initialize","params":{}}}
+{"t":5,"dir":"s2c","msg":{"jsonrpc":"2.0","id":1,"result":{}}}
+{"t":6,"dir":"c2s","msg":{"jsonrpc":"2.0","id":2,"method":"tools/call","params":{"name":"where"}}}
+{"t":7,"dir":"s2c","msg":{"jsonrpc":"2.0","id":"s1","method":"roots/list"}}
+{"t":8,"dir":"c2s","msg":{"jsonrpc":"2.0","id":"s1","result":{"roots":[{"uri":"file:///work"}]}}}
+{"t":9,"dir":"s2c","msg":{"jsonrpc":"2.0","id":2,"result":{"content":[{"type":"text","text":"file:///work"}]}}}
